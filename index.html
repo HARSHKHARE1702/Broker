@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Broker Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-container" class="container">
+        <h2> Broker Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" id="login-btn">Login</button>
+        </form>
+        
+    </div>
+
+    <!-- Broker Portal -->
+    <div id="portal-container" class="container hidden">
+        <h2>Broker Portal</h2>
+        <div class="features">
+            <button onclick="showInvestorManagement()">Investor Management</button>
+            <button onclick="showTransactionDetails()">Transaction Details</button>
+        </div>
+
+        <!-- Investor Management -->
+        <div id="investor-management" class="section hidden">
+            <h3>Investor Management</h3>
+            <ul id="investor-list">
+                <li>Anand</li>
+                <li>Bhumika</li>
+                <li>Aarti</li>
+            </ul>
+        </div>
+
+        <!-- Transaction Details -->
+        <div id="transaction-details" class="section hidden">
+            <h3>Transaction Details</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Investor</th>
+                        <th>Transaction Type</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ananad</td>
+                        <td>Investment</td>
+                        <td>$1000</td>
+                        <td>2024-11-20</td>
+                    </tr>
+                    <tr>
+                        <td>Bhumika</td>
+                        <td>Withdrawal</td>
+                        <td>$500</td>
+                        <td>2024-11-21</td>
+                    </tr>
+                    <tr>
+                        <td>Aarti</td>
+                        <td>Withdrawal</td>
+                        <td>$3000</td>
+                        <td>2024-11-21</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
